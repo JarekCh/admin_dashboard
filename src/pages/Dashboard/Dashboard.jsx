@@ -1,8 +1,7 @@
-import React from 'react';
-import css from './Dashboard.module.css';
+// import css from './Dashboard.module.css';
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return <div className={css.dashboard}>Dashboard</div>;
 };
 
 export default Dashboard;
