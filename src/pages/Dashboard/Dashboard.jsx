@@ -5,7 +5,7 @@ const Dashboard = () => {
     <div className={css.container}>
       {/* left side */}
       <div className={css.dashboard}>
-        <div className={css.dashboardHead}>
+        <div className={`${css.dashboardHead} theme-container`}>
           <div className={css.head}>
             <span>Dashboard</span>
             <div className={css.durationButton}>
@@ -15,8 +15,8 @@ const Dashboard = () => {
                 <option value=''>1 year</option>
               </select>
             </div>
-            <div className={css.cards}>cards</div>
           </div>
+          <div className={css.cards}>cards</div>
         </div>
       </div>
 
