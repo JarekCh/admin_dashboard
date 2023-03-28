@@ -4,7 +4,7 @@ import { AiFillCalendar, AiOutlineTable } from 'react-icons/ai';
 import { FaTasks } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
-export const Sidebar = () => {
+const Sidebar = () => {
   return (
     <div className={css.container}>
       <img src='./logo.png' alt='logo' className={css.logo} />
@@ -27,3 +27,5 @@ export const Sidebar = () => {
     </div>
   );
 };
+
+export default Sidebar;
