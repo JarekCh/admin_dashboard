@@ -1,4 +1,5 @@
 import css from './Orders.module.css';
+import { groupNumber, ordersData } from '../../data';
 
 const Orders = () => {
   return (
@@ -11,6 +12,21 @@ const Orders = () => {
       <div className={`grey-container ${css.stat}`}>
         <span>Amount</span>
         <span>$ {groupNumber(4560)}</span>
+      </div>
+
+      <div className={css.orders}>
+        {ordersData.map((order, index) => (
+          <div key={index} className={css.order}>
+            <div>
+              <span>{order.name}</span>
+              <span>$ {order.change}</span>
+            </div>
+            <div>
+              <span>{order.type}</span>
+              <span>Items: {order.items}</span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

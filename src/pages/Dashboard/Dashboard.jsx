@@ -39,7 +39,7 @@ const Dashboard = () => {
       </div>
 
       {/* right side  */}
-      <div className={css.orders}>{/* <Orders /> */}</div>
+      <Orders />
     </div>
   );
 };
