@@ -1,5 +1,6 @@
 import ReactECharts from 'echarts-for-react';
 import * as echarts from 'echarts';
+
 const StatisticsChart = () => {
   const option = {
     color: ['var(--orange)'],
@@ -18,6 +19,7 @@ const StatisticsChart = () => {
       backgroundColor: 'rgba(0, 0, 0, 0.59)',
       borderWidth: 0,
     },
+
     grid: {
       left: '3%',
       right: '4%',
@@ -33,6 +35,7 @@ const StatisticsChart = () => {
         data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       },
     ],
+
     yAxis: [
       {
         type: 'value',
@@ -41,6 +44,7 @@ const StatisticsChart = () => {
         },
       },
     ],
+
     series: [
       {
         type: 'line',
