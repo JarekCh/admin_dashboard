@@ -10,6 +10,7 @@ const Layout = () => {
   return (
     <div className={css.container}>
       <Sidebar />
+      {/* making the dashboard as the default route */}
       {pathname === '/' && <Navigate to='/dashboard' />}
       <div className={css.dashboard}>
         <div className={css.topBaseGradients}>
