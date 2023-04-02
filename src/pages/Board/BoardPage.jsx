@@ -92,6 +92,18 @@ const BoardPage = () => {
         renderColumnHeader={(props) => {
           const [modalOpened, setModalOpened] = useState(false);
 
+          const handleCardAdd = (title, detail) => {
+            const card = {
+              id: new Date().getTime(),
+              title,
+              description: detail,
+            };
+
+            const updatedBoard = addCard(board, props, card);
+            setBoard(updatedBoard);
+            setModalOpened(false);
+          };
+
           return (
             <div className='column-header'>
               <span>{props.title}</span>
@@ -104,6 +116,7 @@ const BoardPage = () => {
               />
               <AddCardModal
                 visible={modalOpened}
+                handleCardAdd={handleCardAdd}
                 onClose={() => setModalOpened(false)}
               />
             </div>
