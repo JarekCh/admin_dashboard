@@ -9,6 +9,8 @@ import { RxCross2 } from 'react-icons/rx';
 import { IoMdAdd } from 'react-icons/io';
 import useBoard from '../../store/Board';
 import './BoardPage.css';
+import AddCardModal from '../../components/AddCardModal/AddCardModal';
+import { useState } from 'react';
 
 const BoardPage = () => {
   const { board, setBoard } = useBoard();
@@ -87,6 +89,26 @@ const BoardPage = () => {
             <span>{props.description}</span>
           </div>
         )}
+        renderColumnHeader={(props) => {
+          const [modalOpened, setModalOpened] = useState(false);
+
+          return (
+            <div className='column-header'>
+              <span>{props.title}</span>
+
+              <IoMdAdd
+                color='white'
+                size={25}
+                title='Add card'
+                onClick={() => setModalOpened(true)}
+              />
+              <AddCardModal
+                visible={modalOpened}
+                onClose={() => setModalOpened(false)}
+              />
+            </div>
+          );
+        }}
       >
         {board}
       </Board>
