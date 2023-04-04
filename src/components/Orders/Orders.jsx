@@ -5,16 +5,17 @@ import OrdersPieChart from '../OrdersPieChart/OrdersPieChart';
 const Orders = () => {
   return (
     <div className={`${css.container} theme-container`}>
+      {/* header */}
       <div className={css.head}>
         <img src='./logo.png' alt='logo' />
         <span>Orders today</span>
       </div>
-
+      {/* statistics */}
       <div className={`grey-container ${css.stat}`}>
         <span>Amount</span>
         <span>$ {groupNumber(4560)}</span>
       </div>
-
+      {/* orders info */}
       <div className={css.orders}>
         {ordersData.map((order, index) => (
           <div key={index} className={css.order}>
@@ -29,6 +30,7 @@ const Orders = () => {
           </div>
         ))}
       </div>
+      {/* chart */}
       <div className={css.orderChart}>
         <span>Split by orders</span>
         <OrdersPieChart />

@@ -18,6 +18,7 @@ const AddCardModal = ({ visible, onClose, handleCardAdd }) => {
   return (
     <Rodal customStyles={customStyles} visible={visible} onClose={onClose}>
       <div className={css.container}>
+        {/* card title */}
         <div>
           <span className={css.label}>Card Title</span>
           <input
@@ -27,7 +28,7 @@ const AddCardModal = ({ visible, onClose, handleCardAdd }) => {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-
+        {/* card text */}
         <div>
           <span className={css.label}>Detail</span>
           <textArea
@@ -38,7 +39,7 @@ const AddCardModal = ({ visible, onClose, handleCardAdd }) => {
             onChange={(e) => setDetail(e.target.value)}
           />
         </div>
-
+        {/* card button */}
         <button
           disabled={title === '' && detail === ''}
           className={css.saveButton}

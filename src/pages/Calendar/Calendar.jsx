@@ -57,6 +57,7 @@ const Calendar = () => {
           weekends={true}
           nowIndicator={true}
           initialEvents={currentEvents}
+          eventsSet={handleEvents}
           select={handleDateSelect}
           eventClick={handleEventClick}
         />

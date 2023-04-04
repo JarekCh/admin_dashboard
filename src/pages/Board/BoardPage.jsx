@@ -32,29 +32,32 @@ const BoardPage = () => {
     return column[0];
   };
 
+  // trello board color column managment
   const getGradient = (card) => {
     const column = getColumn(card);
     const title = column.title;
-    if (title === 'TODO') {
-      return {
-        background:
-          'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 189, 220) 163.54%)',
-      };
-    } else if (title === 'Doing') {
-      return {
-        background:
-          'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(220, 48, 48) 163.54%)',
-      };
-    } else if (title === 'Completed') {
-      return {
-        background:
-          'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 220, 86) 163.54%)',
-      };
-    } else if (title === 'Backlog') {
-      return {
-        background:
-          'linear-gradient(65.35deg, rgba(65, 65,65, 0.67) -1.72%,rgba(134, 48, 220) 163.54%)',
-      };
+
+    switch (title) {
+      case 'TODO':
+        return {
+          background:
+            'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 189, 220) 163.54%)',
+        };
+      case 'Doing':
+        return {
+          background:
+            'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(220, 48, 48) 163.54%)',
+        };
+      case 'Completed':
+        return {
+          background:
+            'linear-gradient(65.35deg, rgba(65, 65, 65, 0.67) -1.72%, rgba(48, 220, 86) 163.54%)',
+        };
+      case 'Backlog':
+        return {
+          background:
+            'linear-gradient(65.35deg, rgba(65, 65,65, 0.67) -1.72%,rgba(134, 48, 220) 163.54%)',
+        };
     }
   };
 

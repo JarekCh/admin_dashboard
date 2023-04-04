@@ -6,7 +6,7 @@ import Orders from '../../components/Orders/Orders';
 const Dashboard = () => {
   return (
     <div className={css.container}>
-      {/* left side */}
+      {/* left side of dashboard page*/}
       <div className={css.dashboard}>
         <div className={`${css.dashboardHead} theme-container`}>
           <div className={css.head}>
@@ -19,6 +19,7 @@ const Dashboard = () => {
               </select>
             </div>
           </div>
+          {/* dashboard cards with info */}
           <div className={css.cards}>
             {cardsData.map((card, index) => (
               <div key={index} className={css.card}>
@@ -38,7 +39,7 @@ const Dashboard = () => {
         <Statistics />
       </div>
 
-      {/* right side  */}
+      {/* right side of dashboard page */}
       <Orders />
     </div>
   );

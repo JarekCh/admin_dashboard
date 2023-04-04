@@ -18,6 +18,7 @@ const Layout = () => {
           <div className='gradient-orange'></div>
           <div className='gradient-blue'></div>
         </div>
+        {/* Header > date, search bar, profile info */}
         <div className={css.header}>
           <span>{moment().format('dddd, Do MMM YYYY')}</span>
           <div className={css.searchBar}>
