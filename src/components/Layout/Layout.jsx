@@ -2,7 +2,7 @@ import moment from 'moment';
 import css from './Layout.module.css';
 import { BiSearch } from 'react-icons/bi';
 import Sidebar from '../Sidebar/Sidebar';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
 const Layout = () => {
   const { pathname } = useLocation();
